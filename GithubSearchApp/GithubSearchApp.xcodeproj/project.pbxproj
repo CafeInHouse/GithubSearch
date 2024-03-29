@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		984017832BB6F7510087799A /* KNetworker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984457822BB6F73500A74DBD /* KNetworker.framework */; };
 		98BE07A42BB6E72C001FA961 /* GithubSearchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE07A32BB6E72C001FA961 /* GithubSearchAppApp.swift */; };
 		98BE07A62BB6E72C001FA961 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE07A52BB6E72C001FA961 /* ContentView.swift */; };
 		98BE07A82BB6E72D001FA961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BE07A72BB6E72D001FA961 /* Assets.xcassets */; };
 		98BE07AB2BB6E72D001FA961 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BE07AA2BB6E72D001FA961 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		984457812BB6F73500A74DBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9844577D2BB6F73500A74DBD /* KNetworker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 984457722BB6F71200A74DBD;
+			remoteInfo = KNetworker;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		9844577D2BB6F73500A74DBD /* KNetworker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KNetworker.xcodeproj; path = ../KNetworker/KNetworker.xcodeproj; sourceTree = "<group>"; };
 		98BE07A02BB6E72C001FA961 /* GithubSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BE07A32BB6E72C001FA961 /* GithubSearchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchAppApp.swift; sourceTree = "<group>"; };
 		98BE07A52BB6E72C001FA961 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +38,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984017832BB6F7510087799A /* KNetworker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9844577C2BB6F73500A74DBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9844577D2BB6F73500A74DBD /* KNetworker.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9844577E2BB6F73500A74DBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				984457822BB6F73500A74DBD /* KNetworker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		98BE07972BB6E72C001FA961 = {
 			isa = PBXGroup;
 			children = (
 				98BE07A22BB6E72C001FA961 /* GithubSearchApp */,
 				98BE07A12BB6E72C001FA961 /* Products */,
+				9844577C2BB6F73500A74DBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,12 +143,28 @@
 			mainGroup = 98BE07972BB6E72C001FA961;
 			productRefGroup = 98BE07A12BB6E72C001FA961 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9844577E2BB6F73500A74DBD /* Products */;
+					ProjectRef = 9844577D2BB6F73500A74DBD /* KNetworker.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				98BE079F2BB6E72C001FA961 /* GithubSearchApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		984457822BB6F73500A74DBD /* KNetworker.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KNetworker.framework;
+			remoteRef = 984457812BB6F73500A74DBD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		98BE079E2BB6E72C001FA961 /* Resources */ = {
