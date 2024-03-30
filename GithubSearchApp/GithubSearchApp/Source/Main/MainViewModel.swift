@@ -21,7 +21,7 @@ final class MainViewModel: ObservableObject {
 extension MainViewModel {
     
     /// Splash 이벤트 3초 후 메인 화면으로 이동
-    func onAppearSplash() async {
+    func onAppear() async {
         try? await Task.sleep(nanoseconds: 3_000_000_000)
         await MainActor.run {
             destination = .home

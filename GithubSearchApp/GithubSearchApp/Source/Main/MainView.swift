@@ -19,21 +19,22 @@ struct MainView: View {
     }
     
     var body: some View {
+        bodyView
+            .onceTask {
+                await viewModel.onAppear()
+            }
+    }
+    
+    @ViewBuilder
+    private var bodyView: some View {
         switch viewModel.destination {
         case .splash:
+            // MARK: - SplashView
             SplashView()
-                .onceTask {
-                    await viewModel.onAppearSplash()
-                }
-            
+
         case .home:
+            // MARK: - HomeView
             HomeView()
         }
     }
-}
-
-#Preview {
-    MainView(
-        viewModel: MainViewModel()
-    )
 }
