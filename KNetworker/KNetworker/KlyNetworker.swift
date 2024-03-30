@@ -7,6 +7,25 @@
 
 import Foundation
 
+extension KlyNetworker {
+    
+    /// 리얼 endpoint를 적용
+    public static var product: KlyNetworker {
+        return KlyNetworker(
+            pahse: .product,
+            requester: URLSession(configuration: KlyNetworker.Configuration)
+        )
+    }
+    
+    /// 개발자 endpoint를 적용
+    public static var develop: KlyNetworker {
+        return KlyNetworker(
+            pahse: .dev,
+            requester: URLSession(configuration: KlyNetworker.Configuration)
+        )
+    }
+}
+
 final public class KlyNetworker {
     
     /// 환경 상태
