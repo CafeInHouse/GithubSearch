@@ -7,7 +7,6 @@
 
 import Foundation
 
-@MainActor
 final public class KlyNetworker {
     
     /// 환경 상태
@@ -88,7 +87,7 @@ extension KlyNetworker {
                 print("🔴 [\(urlRequest.url?.absoluteString ?? "")][Status] \((response as? HTTPURLResponse)?.statusCode ?? -999)")
                 #endif
                 
-                throw NSError(domain: "", code: -88)
+                throw KlyError.invalidStatus((response as? HTTPURLResponse)?.statusCode ?? -999)
             }
             
             #if DEBUG
@@ -102,7 +101,10 @@ extension KlyNetworker {
             #endif
             
             guard let model = try? JSONDecoder().decode(T.self, from: data) else {
-                throw NSError(domain: "", code: -88)
+                #if DEBUG
+                print("🔴 [invalidDecode][\(T.self)])")
+                #endif
+                throw KlyError.invalidDecode
             }
             
             return model
@@ -117,7 +119,7 @@ extension KlyNetworker {
                 #if DEBUG
                 print("🔴 [Error] unowned \(error)")
                 #endif
-                throw KlyError.unowned(error)
+                throw KlyError.unowned(message: "알 수 없는 에러입니다.")
             }
         }
     }

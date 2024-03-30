@@ -15,7 +15,25 @@
 		984017922BB7787B0087799A /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984017912BB7787B0087799A /* Requester.swift */; };
 		984017962BB77D3C0087799A /* KlyNetworker+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984017952BB77D3C0087799A /* KlyNetworker+Error.swift */; };
 		984017992BB77ED30087799A /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984017982BB77ED30087799A /* Monitor.swift */; };
+		98EB9DE92BB78083007C896E /* KNetworkerTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EB9DE82BB78083007C896E /* KNetworkerTester.swift */; };
+		98EB9DEA2BB78083007C896E /* KNetworker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984457722BB6F71200A74DBD /* KNetworker.framework */; platformFilter = ios; };
+		98EB9DF22BB7814C007C896E /* MockRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EB9DF12BB7814C007C896E /* MockRequester.swift */; };
+		98EB9DF52BB7840D007C896E /* MockAPI+InValidURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EB9DF42BB7840D007C896E /* MockAPI+InValidURL.swift */; };
+		98EB9DF82BB784DD007C896E /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EB9DF72BB784DD007C896E /* MockModel.swift */; };
+		98EB9DFA2BB78A98007C896E /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EB9DF92BB78A98007C896E /* TestUtil.swift */; };
+		98EB9DFC2BB78AC2007C896E /* MockModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 98EB9DFB2BB78AC2007C896E /* MockModel.json */; };
+		98EB9DFE2BB78BE0007C896E /* InValidMockModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 98EB9DFD2BB78BE0007C896E /* InValidMockModel.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		98EB9DEB2BB78083007C896E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 984457692BB6F71200A74DBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 984457712BB6F71200A74DBD;
+			remoteInfo = KNetworker;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		984017862BB6F75C0087799A /* KlyNetworker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlyNetworker.swift; sourceTree = "<group>"; };
@@ -27,6 +45,14 @@
 		984017952BB77D3C0087799A /* KlyNetworker+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KlyNetworker+Error.swift"; sourceTree = "<group>"; };
 		984017982BB77ED30087799A /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
 		984457722BB6F71200A74DBD /* KNetworker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KNetworker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98EB9DE62BB78083007C896E /* KNetworkerTester.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KNetworkerTester.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98EB9DE82BB78083007C896E /* KNetworkerTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNetworkerTester.swift; sourceTree = "<group>"; };
+		98EB9DF12BB7814C007C896E /* MockRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequester.swift; sourceTree = "<group>"; };
+		98EB9DF42BB7840D007C896E /* MockAPI+InValidURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockAPI+InValidURL.swift"; sourceTree = "<group>"; };
+		98EB9DF72BB784DD007C896E /* MockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
+		98EB9DF92BB78A98007C896E /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
+		98EB9DFB2BB78AC2007C896E /* MockModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockModel.json; sourceTree = "<group>"; };
+		98EB9DFD2BB78BE0007C896E /* InValidMockModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InValidMockModel.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +60,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98EB9DE32BB78083007C896E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98EB9DEA2BB78083007C896E /* KNetworker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				984457742BB6F71200A74DBD /* KNetworker */,
+				98EB9DE72BB78083007C896E /* KNetworkerTester */,
 				984457732BB6F71200A74DBD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				984457722BB6F71200A74DBD /* KNetworker.framework */,
+				98EB9DE62BB78083007C896E /* KNetworkerTester.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +121,44 @@
 				9840178C2BB6F8870087799A /* KlyNetworker+URLSessionConfiguration.swift */,
 			);
 			path = KNetworker;
+			sourceTree = "<group>";
+		};
+		98EB9DE72BB78083007C896E /* KNetworkerTester */ = {
+			isa = PBXGroup;
+			children = (
+				98EB9DF62BB784D7007C896E /* MockModel */,
+				98EB9DF32BB78401007C896E /* MockAPI */,
+				98EB9DF02BB7813F007C896E /* MockRequester */,
+				98EB9DE82BB78083007C896E /* KNetworkerTester.swift */,
+			);
+			path = KNetworkerTester;
+			sourceTree = "<group>";
+		};
+		98EB9DF02BB7813F007C896E /* MockRequester */ = {
+			isa = PBXGroup;
+			children = (
+				98EB9DF12BB7814C007C896E /* MockRequester.swift */,
+			);
+			path = MockRequester;
+			sourceTree = "<group>";
+		};
+		98EB9DF32BB78401007C896E /* MockAPI */ = {
+			isa = PBXGroup;
+			children = (
+				98EB9DF42BB7840D007C896E /* MockAPI+InValidURL.swift */,
+			);
+			path = MockAPI;
+			sourceTree = "<group>";
+		};
+		98EB9DF62BB784D7007C896E /* MockModel */ = {
+			isa = PBXGroup;
+			children = (
+				98EB9DF72BB784DD007C896E /* MockModel.swift */,
+				98EB9DF92BB78A98007C896E /* TestUtil.swift */,
+				98EB9DFB2BB78AC2007C896E /* MockModel.json */,
+				98EB9DFD2BB78BE0007C896E /* InValidMockModel.json */,
+			);
+			path = MockModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +192,24 @@
 			productReference = 984457722BB6F71200A74DBD /* KNetworker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		98EB9DE52BB78083007C896E /* KNetworkerTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98EB9DEF2BB78083007C896E /* Build configuration list for PBXNativeTarget "KNetworkerTester" */;
+			buildPhases = (
+				98EB9DE22BB78083007C896E /* Sources */,
+				98EB9DE32BB78083007C896E /* Frameworks */,
+				98EB9DE42BB78083007C896E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98EB9DEC2BB78083007C896E /* PBXTargetDependency */,
+			);
+			name = KNetworkerTester;
+			productName = KNetworkerTester;
+			productReference = 98EB9DE62BB78083007C896E /* KNetworkerTester.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,11 +217,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					984457712BB6F71200A74DBD = {
 						CreatedOnToolsVersion = 15.3;
 						LastSwiftMigration = 1530;
+					};
+					98EB9DE52BB78083007C896E = {
+						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
@@ -147,6 +243,7 @@
 			projectRoot = "";
 			targets = (
 				984457712BB6F71200A74DBD /* KNetworker */,
+				98EB9DE52BB78083007C896E /* KNetworkerTester */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +253,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98EB9DE42BB78083007C896E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98EB9DFC2BB78AC2007C896E /* MockModel.json in Resources */,
+				98EB9DFE2BB78BE0007C896E /* InValidMockModel.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +283,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		98EB9DE22BB78083007C896E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98EB9DF22BB7814C007C896E /* MockRequester.swift in Sources */,
+				98EB9DF82BB784DD007C896E /* MockModel.swift in Sources */,
+				98EB9DE92BB78083007C896E /* KNetworkerTester.swift in Sources */,
+				98EB9DFA2BB78A98007C896E /* TestUtil.swift in Sources */,
+				98EB9DF52BB7840D007C896E /* MockAPI+InValidURL.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		98EB9DEC2BB78083007C896E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 984457712BB6F71200A74DBD /* KNetworker */;
+			targetProxy = 98EB9DEB2BB78083007C896E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		984457772BB6F71200A74DBD /* Debug */ = {
@@ -312,7 +439,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 524TVTU6B9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -386,6 +513,46 @@
 			};
 			name = Release;
 		};
+		98EB9DED2BB78083007C896E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 524TVTU6B9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.linsaeng.KNetworkerTester;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		98EB9DEE2BB78083007C896E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 524TVTU6B9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.linsaeng.KNetworkerTester;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -403,6 +570,15 @@
 			buildConfigurations = (
 				9844577A2BB6F71200A74DBD /* Debug */,
 				9844577B2BB6F71200A74DBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98EB9DEF2BB78083007C896E /* Build configuration list for PBXNativeTarget "KNetworkerTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98EB9DED2BB78083007C896E /* Debug */,
+				98EB9DEE2BB78083007C896E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

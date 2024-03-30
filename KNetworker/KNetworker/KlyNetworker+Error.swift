@@ -8,8 +8,9 @@
 import Foundation
 
 
-public enum KlyError: Error, Sendable {
+public enum KlyError: Error, Equatable, Sendable {
     case invalidURL
     case invalidStatus(Int)
-    case unowned(Error)
+    case invalidDecode
+    case unowned(message: String)
 }
