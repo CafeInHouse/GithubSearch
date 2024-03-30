@@ -33,6 +33,8 @@
 		98FFC58B2BB7CBAF005E0153 /* ServiceApp+Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FFC5892BB7CBAF005E0153 /* ServiceApp+Phase.swift */; };
 		98FFC58D2BB7CBD3005E0153 /* ServiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FFC58C2BB7CBD3005E0153 /* ServiceApp.swift */; };
 		98FFC58E2BB7CBD3005E0153 /* ServiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FFC58C2BB7CBD3005E0153 /* ServiceApp.swift */; };
+		98FFC5912BB7D9D9005E0153 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FFC5902BB7D9D9005E0153 /* HomeViewModel.swift */; };
+		98FFC5922BB7D9D9005E0153 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FFC5902BB7D9D9005E0153 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,7 @@
 		98FFC5862BB7C9F5005E0153 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		98FFC5892BB7CBAF005E0153 /* ServiceApp+Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceApp+Phase.swift"; sourceTree = "<group>"; };
 		98FFC58C2BB7CBD3005E0153 /* ServiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceApp.swift; sourceTree = "<group>"; };
+		98FFC5902BB7D9D9005E0153 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				98FFC5862BB7C9F5005E0153 /* HomeView.swift */,
+				98FFC5902BB7D9D9005E0153 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -380,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98FFC5762BB7C4F1005E0153 /* SplashView.swift in Sources */,
+				98FFC5912BB7D9D9005E0153 /* HomeViewModel.swift in Sources */,
 				98BE07A42BB6E72C001FA961 /* GithubSearchAppApp.swift in Sources */,
 				98FFC58A2BB7CBAF005E0153 /* ServiceApp+Phase.swift in Sources */,
 				98FFC57B2BB7C592005E0153 /* MainView.swift in Sources */,
@@ -395,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98FFC57F2BB7C5B2005E0153 /* MainView.swift in Sources */,
+				98FFC5922BB7D9D9005E0153 /* HomeViewModel.swift in Sources */,
 				98FFC5622BB7A04D005E0153 /* GithubSearchAppApp.swift in Sources */,
 				98FFC58B2BB7CBAF005E0153 /* ServiceApp+Phase.swift in Sources */,
 				98FFC5812BB7C5BA005E0153 /* SplashViewModel.swift in Sources */,
