@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		984017832BB6F7510087799A /* KNetworker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984457822BB6F73500A74DBD /* KNetworker.framework */; };
+		984780BB2BB7932300B8250E /* KUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98B2E7962BB7929100ECE4EB /* KUI.framework */; };
+		984780BC2BB7932300B8250E /* KUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98B2E7962BB7929100ECE4EB /* KUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98BE07A42BB6E72C001FA961 /* GithubSearchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE07A32BB6E72C001FA961 /* GithubSearchAppApp.swift */; };
 		98BE07A62BB6E72C001FA961 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE07A52BB6E72C001FA961 /* ContentView.swift */; };
 		98BE07A82BB6E72D001FA961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BE07A72BB6E72D001FA961 /* Assets.xcassets */; };
@@ -22,10 +24,39 @@
 			remoteGlobalIDString = 984457722BB6F71200A74DBD;
 			remoteInfo = KNetworker;
 		};
+		98B2E7922BB7929100ECE4EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9844577D2BB6F73500A74DBD /* KNetworker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 98EB9DE62BB78083007C896E;
+			remoteInfo = KNetworkerTester;
+		};
+		98B2E7952BB7929100ECE4EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98B2E78D2BB7929100ECE4EB /* KUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 98B2E7832BB7927E00ECE4EB;
+			remoteInfo = KUI;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		984780BD2BB7932300B8250E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				984780BC2BB7932300B8250E /* KUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9844577D2BB6F73500A74DBD /* KNetworker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KNetworker.xcodeproj; path = ../KNetworker/KNetworker.xcodeproj; sourceTree = "<group>"; };
+		98B2E78D2BB7929100ECE4EB /* KUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KUI.xcodeproj; path = ../KUI/KUI.xcodeproj; sourceTree = "<group>"; };
 		98BE07A02BB6E72C001FA961 /* GithubSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BE07A32BB6E72C001FA961 /* GithubSearchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchAppApp.swift; sourceTree = "<group>"; };
 		98BE07A52BB6E72C001FA961 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984780BB2BB7932300B8250E /* KUI.framework in Frameworks */,
 				984017832BB6F7510087799A /* KNetworker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,6 +80,7 @@
 		9844577C2BB6F73500A74DBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				98B2E78D2BB7929100ECE4EB /* KUI.xcodeproj */,
 				9844577D2BB6F73500A74DBD /* KNetworker.xcodeproj */,
 			);
 			name = Frameworks;
@@ -57,6 +90,15 @@
 			isa = PBXGroup;
 			children = (
 				984457822BB6F73500A74DBD /* KNetworker.framework */,
+				98B2E7932BB7929100ECE4EB /* KNetworkerTester.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98B2E78E2BB7929100ECE4EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98B2E7962BB7929100ECE4EB /* KUI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +149,7 @@
 				98BE079C2BB6E72C001FA961 /* Sources */,
 				98BE079D2BB6E72C001FA961 /* Frameworks */,
 				98BE079E2BB6E72C001FA961 /* Resources */,
+				984780BD2BB7932300B8250E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +191,10 @@
 					ProductGroup = 9844577E2BB6F73500A74DBD /* Products */;
 					ProjectRef = 9844577D2BB6F73500A74DBD /* KNetworker.xcodeproj */;
 				},
+				{
+					ProductGroup = 98B2E78E2BB7929100ECE4EB /* Products */;
+					ProjectRef = 98B2E78D2BB7929100ECE4EB /* KUI.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -162,6 +209,20 @@
 			fileType = wrapper.framework;
 			path = KNetworker.framework;
 			remoteRef = 984457812BB6F73500A74DBD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		98B2E7932BB7929100ECE4EB /* KNetworkerTester.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KNetworkerTester.xctest;
+			remoteRef = 98B2E7922BB7929100ECE4EB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		98B2E7962BB7929100ECE4EB /* KUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KUI.framework;
+			remoteRef = 98B2E7952BB7929100ECE4EB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
