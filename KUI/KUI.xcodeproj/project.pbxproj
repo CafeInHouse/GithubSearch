@@ -13,6 +13,7 @@
 		984780C72BB794EA00B8250E /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984780C62BB794EA00B8250E /* Color.xcassets */; };
 		98FFC54F2BB79A03005E0153 /* DeubgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FFC54E2BB79A03005E0153 /* DeubgView.swift */; };
 		98FFC5522BB79A39005E0153 /* KUIText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FFC5512BB79A39005E0153 /* KUIText.swift */; };
+		98FFC5842BB7C7F4005E0153 /* onAppearTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FFC5832BB7C7F4005E0153 /* onAppearTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		98B2E7832BB7927E00ECE4EB /* KUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98FFC54E2BB79A03005E0153 /* DeubgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeubgView.swift; sourceTree = "<group>"; };
 		98FFC5512BB79A39005E0153 /* KUIText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KUIText.swift; sourceTree = "<group>"; };
+		98FFC5832BB7C7F4005E0153 /* onAppearTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onAppearTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		98FFC5492BB7997C005E0153 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				98FFC5822BB7C7E4005E0153 /* ViewModifier */,
 				98FFC5502BB79A25005E0153 /* Text */,
 				98FFC54D2BB799FA005E0153 /* Debug */,
 			);
@@ -111,6 +114,14 @@
 				98FFC5512BB79A39005E0153 /* KUIText.swift */,
 			);
 			path = Text;
+			sourceTree = "<group>";
+		};
+		98FFC5822BB7C7E4005E0153 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				98FFC5832BB7C7F4005E0153 /* onAppearTask.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 				98FFC5522BB79A39005E0153 /* KUIText.swift in Sources */,
 				984780B92BB7930C00B8250E /* KUI.swift in Sources */,
 				984780C22BB7944700B8250E /* KUI+Bundle.swift in Sources */,
+				98FFC5842BB7C7F4005E0153 /* onAppearTask.swift in Sources */,
 				984780C52BB7947A00B8250E /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
