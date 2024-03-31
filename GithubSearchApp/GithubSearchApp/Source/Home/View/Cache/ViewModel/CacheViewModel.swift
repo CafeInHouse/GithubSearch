@@ -7,7 +7,6 @@
 
 import Foundation
 
-@MainActor
 final class CacheViewModel: ObservableObject {
     
     private(set) var searchKeywordList: [String] = []

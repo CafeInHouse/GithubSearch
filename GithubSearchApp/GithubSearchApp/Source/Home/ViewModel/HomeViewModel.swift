@@ -13,21 +13,17 @@ final class HomeViewModel: ObservableObject {
     enum ViewState: Equatable, Sendable {
         case cache(cacheKeywordList: [String]) // 기본 화면 ( 과거 검색 리스트 )
         case search(searchItems: [SearchItemModel]) // 검색 결과 화면
-        case searching // 검색 중 과거 검색 리스트를 보여주는 화면
+        case searching(filterKeywordList: [String]) // 검색 중 과거 검색 리스트를 보여주는 화면
     }
     
     private let networkerDependency: HomeNetworkerDependency
-    private var netwoekrTask: Task<Void, Never>?
+    private var networkerTask: Task<Void, Never>?
     
     private let cacheDepdency: HomeCacheWorkerable
     private var cacheKeywordList: [String] = []
     
     private var cancellables = Set<AnyCancellable>()
-    
-    deinit {
-        netwoekrTask?.cancel()
-    }
-    
+
     init(
         networkerDependency: HomeNetworkerDependency = HomeViewNetWorker(),
         cacheDepdency: HomeCacheWorkerable = HomeCacheWorker()
@@ -60,7 +56,7 @@ final class HomeViewModel: ObservableObject {
     }
     
     private func requestSearch(keyword: String?) async {
-        netwoekrTask?.cancel()
+        networkerTask?.cancel()
         
         guard let keyword = keyword, keyword.isEmpty == false else {
             await MainActor.run { [weak self] in
@@ -75,7 +71,7 @@ final class HomeViewModel: ObservableObject {
         }
         cacheDepdency.saveStringList(cacheKeywordList)
         
-        netwoekrTask = Task {
+        networkerTask = Task {
             do {
                 let searchmodel = try await self.networkerDependency.search(with: keyword)
                 
@@ -105,8 +101,11 @@ extension HomeViewModel {
     
     /// searchbar에서 검색 debounce 3초
     /// - Parameter keyword: 검색 keyword
-    func onSearch(with keyword: String) {
+    @MainActor
+    func onSearch(with keyword: String) async {
         self.keyword = keyword
+        let filterList = filterKeyword(cacheKeywordList, containing: keyword)
+        viewState = .searching(filterKeywordList: filterList)
     }
     
     /// 즉시 검색
@@ -124,10 +123,19 @@ extension HomeViewModel {
         }
     }
     
+    /// 검색 키워드 삭제
+    /// - Parameter keyword: 검색 keyword
     func removeKeyword(with keyword: String) async {
         self.cacheKeywordList = cacheDepdency.removeStringFromList(keyword)
         await MainActor.run { [weak self] in
             self?.viewState = .cache(cacheKeywordList: self?.cacheKeywordList ?? [])
         }
+    }
+}
+
+extension HomeViewModel {
+    func filterKeyword(_ strings: [String], containing searchString: String) -> [String] {
+        let filteredStrings = strings.filter { $0.contains(searchString) }
+        return filteredStrings
     }
 }
