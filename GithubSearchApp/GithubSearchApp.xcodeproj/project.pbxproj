@@ -16,6 +16,10 @@
 		98A73ED12BB8CD580027057E /* CacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73ECC2BB8CC8F0027057E /* CacheView.swift */; };
 		98A73ED62BB8CF8F0027057E /* HomeCacheWorkerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73ED52BB8CF8F0027057E /* HomeCacheWorkerable.swift */; };
 		98A73ED72BB8CF8F0027057E /* HomeCacheWorkerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73ED52BB8CF8F0027057E /* HomeCacheWorkerable.swift */; };
+		98A73EDA2BB8ECAD0027057E /* SearchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73ED92BB8ECAD0027057E /* SearchingView.swift */; };
+		98A73EDB2BB8ECAD0027057E /* SearchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73ED92BB8ECAD0027057E /* SearchingView.swift */; };
+		98A73EDD2BB8EE6B0027057E /* SearchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73EDC2BB8EE6B0027057E /* SearchingViewModel.swift */; };
+		98A73EDE2BB8EE6B0027057E /* SearchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73EDC2BB8EE6B0027057E /* SearchingViewModel.swift */; };
 		98BE07A42BB6E72C001FA961 /* GithubSearchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE07A32BB6E72C001FA961 /* GithubSearchAppApp.swift */; };
 		98BE07A82BB6E72D001FA961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BE07A72BB6E72D001FA961 /* Assets.xcassets */; };
 		98BE07AB2BB6E72D001FA961 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BE07AA2BB6E72D001FA961 /* Preview Assets.xcassets */; };
@@ -109,6 +113,8 @@
 		98A73ECC2BB8CC8F0027057E /* CacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheView.swift; sourceTree = "<group>"; };
 		98A73ECE2BB8CD540027057E /* CacheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheViewModel.swift; sourceTree = "<group>"; };
 		98A73ED52BB8CF8F0027057E /* HomeCacheWorkerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCacheWorkerable.swift; sourceTree = "<group>"; };
+		98A73ED92BB8ECAD0027057E /* SearchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingView.swift; sourceTree = "<group>"; };
+		98A73EDC2BB8EE6B0027057E /* SearchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingViewModel.swift; sourceTree = "<group>"; };
 		98B2E78D2BB7929100ECE4EB /* KUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KUI.xcodeproj; path = ../KUI/KUI.xcodeproj; sourceTree = "<group>"; };
 		98BE07A02BB6E72C001FA961 /* [Product] GithubSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "[Product] GithubSearchApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BE07A32BB6E72C001FA961 /* GithubSearchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchAppApp.swift; sourceTree = "<group>"; };
@@ -203,6 +209,15 @@
 				98A73ED52BB8CF8F0027057E /* HomeCacheWorkerable.swift */,
 			);
 			path = HomeCacheDependency;
+			sourceTree = "<group>";
+		};
+		98A73ED82BB8EC9A0027057E /* Searching */ = {
+			isa = PBXGroup;
+			children = (
+				98A73ED92BB8ECAD0027057E /* SearchingView.swift */,
+				98A73EDC2BB8EE6B0027057E /* SearchingViewModel.swift */,
+			);
+			path = Searching;
 			sourceTree = "<group>";
 		};
 		98B2E78E2BB7929100ECE4EB /* Products */ = {
@@ -321,6 +336,7 @@
 				98FFC5862BB7C9F5005E0153 /* HomeView.swift */,
 				98A73ECB2BB8CC800027057E /* Cache */,
 				98FFC5942BB7E2A7005E0153 /* Search */,
+				98A73ED82BB8EC9A0027057E /* Searching */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -531,6 +547,8 @@
 				98A73ECD2BB8CC8F0027057E /* CacheView.swift in Sources */,
 				98FFC5A42BB7E76A005E0153 /* HomeAPI.swift in Sources */,
 				98FFC5782BB7C50B005E0153 /* SplashViewModel.swift in Sources */,
+				98A73EDA2BB8ECAD0027057E /* SearchingView.swift in Sources */,
+				98A73EDD2BB8EE6B0027057E /* SearchingViewModel.swift in Sources */,
 				98FFC57D2BB7C5AD005E0153 /* MainViewModel.swift in Sources */,
 				98A73ED62BB8CF8F0027057E /* HomeCacheWorkerable.swift in Sources */,
 				98FFC5992BB7E3EC005E0153 /* HomeViewNetWorkerable.swift in Sources */,
@@ -555,6 +573,8 @@
 				98FFC5B12BB82917005E0153 /* SearchViewModel.swift in Sources */,
 				98FFC58E2BB7CBD3005E0153 /* ServiceApp.swift in Sources */,
 				98FFC5A52BB7E76A005E0153 /* HomeAPI.swift in Sources */,
+				98A73EDB2BB8ECAD0027057E /* SearchingView.swift in Sources */,
+				98A73EDE2BB8EE6B0027057E /* SearchingViewModel.swift in Sources */,
 				98FFC57E2BB7C5AD005E0153 /* MainViewModel.swift in Sources */,
 				98A73ED72BB8CF8F0027057E /* HomeCacheWorkerable.swift in Sources */,
 				98FFC5802BB7C5B7005E0153 /* SplashView.swift in Sources */,

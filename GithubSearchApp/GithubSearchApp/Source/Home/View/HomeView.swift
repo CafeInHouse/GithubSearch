@@ -45,9 +45,10 @@ struct HomeView: View {
                     .listStyle(.plain)
                     .navigationTitle("Search")
                 
-            case .searching:
+            case .searching(let filterKeywordList):
                 // MARK: - 검색 중 과거 검색 했던 리스트를 보여주는 화면 ( 과거 검색 리스트 )
-                Text("검색중")
+                SearchingView()
+                    .environmentObject(SearchingViewModel(keywordList: filterKeywordList))
                     .listStyle(.plain)
                     .navigationTitle("Search")
             }
@@ -57,7 +58,9 @@ struct HomeView: View {
             text: .init(get: {
                 return viewModel.keyword ?? ""
             }, set: { newKeyWord in
-                viewModel.onSearch(with: newKeyWord)
+                Task { @MainActor in
+                    await viewModel.onSearch(with: newKeyWord)
+                }
             }),
             placement: .automatic,
             prompt: "저장소 검색"
