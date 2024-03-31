@@ -10,6 +10,12 @@
 		984017832BB6F7510087799A /* KNetworker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984457822BB6F73500A74DBD /* KNetworker.framework */; };
 		984780BB2BB7932300B8250E /* KUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98B2E7962BB7929100ECE4EB /* KUI.framework */; };
 		984780BC2BB7932300B8250E /* KUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98B2E7962BB7929100ECE4EB /* KUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		98A73ECD2BB8CC8F0027057E /* CacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73ECC2BB8CC8F0027057E /* CacheView.swift */; };
+		98A73ECF2BB8CD540027057E /* CacheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73ECE2BB8CD540027057E /* CacheViewModel.swift */; };
+		98A73ED02BB8CD540027057E /* CacheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73ECE2BB8CD540027057E /* CacheViewModel.swift */; };
+		98A73ED12BB8CD580027057E /* CacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73ECC2BB8CC8F0027057E /* CacheView.swift */; };
+		98A73ED62BB8CF8F0027057E /* HomeCacheWorkerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73ED52BB8CF8F0027057E /* HomeCacheWorkerable.swift */; };
+		98A73ED72BB8CF8F0027057E /* HomeCacheWorkerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A73ED52BB8CF8F0027057E /* HomeCacheWorkerable.swift */; };
 		98BE07A42BB6E72C001FA961 /* GithubSearchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE07A32BB6E72C001FA961 /* GithubSearchAppApp.swift */; };
 		98BE07A82BB6E72D001FA961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BE07A72BB6E72D001FA961 /* Assets.xcassets */; };
 		98BE07AB2BB6E72D001FA961 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BE07AA2BB6E72D001FA961 /* Preview Assets.xcassets */; };
@@ -100,6 +106,9 @@
 
 /* Begin PBXFileReference section */
 		9844577D2BB6F73500A74DBD /* KNetworker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KNetworker.xcodeproj; path = ../KNetworker/KNetworker.xcodeproj; sourceTree = "<group>"; };
+		98A73ECC2BB8CC8F0027057E /* CacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheView.swift; sourceTree = "<group>"; };
+		98A73ECE2BB8CD540027057E /* CacheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheViewModel.swift; sourceTree = "<group>"; };
+		98A73ED52BB8CF8F0027057E /* HomeCacheWorkerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCacheWorkerable.swift; sourceTree = "<group>"; };
 		98B2E78D2BB7929100ECE4EB /* KUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KUI.xcodeproj; path = ../KUI/KUI.xcodeproj; sourceTree = "<group>"; };
 		98BE07A02BB6E72C001FA961 /* [Product] GithubSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "[Product] GithubSearchApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BE07A32BB6E72C001FA961 /* GithubSearchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchAppApp.swift; sourceTree = "<group>"; };
@@ -161,6 +170,39 @@
 				98B2E7932BB7929100ECE4EB /* KNetworkerTester.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		98A73ECB2BB8CC800027057E /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				98A73ED22BB8CEF80027057E /* View */,
+				98A73ED32BB8CEFF0027057E /* ViewModel */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		98A73ED22BB8CEF80027057E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98A73ECC2BB8CC8F0027057E /* CacheView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		98A73ED32BB8CEFF0027057E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				98A73ECE2BB8CD540027057E /* CacheViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		98A73ED42BB8CF6B0027057E /* HomeCacheDependency */ = {
+			isa = PBXGroup;
+			children = (
+				98A73ED52BB8CF8F0027057E /* HomeCacheWorkerable.swift */,
+			);
+			path = HomeCacheDependency;
 			sourceTree = "<group>";
 		};
 		98B2E78E2BB7929100ECE4EB /* Products */ = {
@@ -276,8 +318,9 @@
 		98FFC59B2BB7E452005E0153 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				98FFC5942BB7E2A7005E0153 /* Search */,
 				98FFC5862BB7C9F5005E0153 /* HomeView.swift */,
+				98A73ECB2BB8CC800027057E /* Cache */,
+				98FFC5942BB7E2A7005E0153 /* Search */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +337,7 @@
 		98FFC59D2BB7E46A005E0153 /* Depdency */ = {
 			isa = PBXGroup;
 			children = (
+				98A73ED42BB8CF6B0027057E /* HomeCacheDependency */,
 				98FFC5A22BB7E724005E0153 /* HomeNetworkerDependency */,
 			);
 			path = Depdency;
@@ -484,10 +528,13 @@
 				98FFC5872BB7C9F5005E0153 /* HomeView.swift in Sources */,
 				98FFC5B02BB82917005E0153 /* SearchViewModel.swift in Sources */,
 				98FFC58D2BB7CBD3005E0153 /* ServiceApp.swift in Sources */,
+				98A73ECD2BB8CC8F0027057E /* CacheView.swift in Sources */,
 				98FFC5A42BB7E76A005E0153 /* HomeAPI.swift in Sources */,
 				98FFC5782BB7C50B005E0153 /* SplashViewModel.swift in Sources */,
 				98FFC57D2BB7C5AD005E0153 /* MainViewModel.swift in Sources */,
+				98A73ED62BB8CF8F0027057E /* HomeCacheWorkerable.swift in Sources */,
 				98FFC5992BB7E3EC005E0153 /* HomeViewNetWorkerable.swift in Sources */,
+				98A73ECF2BB8CD540027057E /* CacheViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,11 +549,14 @@
 				98FFC5622BB7A04D005E0153 /* GithubSearchAppApp.swift in Sources */,
 				98FFC58B2BB7CBAF005E0153 /* ServiceApp+Phase.swift in Sources */,
 				98FFC5812BB7C5BA005E0153 /* SplashViewModel.swift in Sources */,
+				98A73ED02BB8CD540027057E /* CacheViewModel.swift in Sources */,
 				98FFC5882BB7C9F5005E0153 /* HomeView.swift in Sources */,
+				98A73ED12BB8CD580027057E /* CacheView.swift in Sources */,
 				98FFC5B12BB82917005E0153 /* SearchViewModel.swift in Sources */,
 				98FFC58E2BB7CBD3005E0153 /* ServiceApp.swift in Sources */,
 				98FFC5A52BB7E76A005E0153 /* HomeAPI.swift in Sources */,
 				98FFC57E2BB7C5AD005E0153 /* MainViewModel.swift in Sources */,
+				98A73ED72BB8CF8F0027057E /* HomeCacheWorkerable.swift in Sources */,
 				98FFC5802BB7C5B7005E0153 /* SplashView.swift in Sources */,
 				98FFC59A2BB7E3EC005E0153 /* HomeViewNetWorkerable.swift in Sources */,
 			);

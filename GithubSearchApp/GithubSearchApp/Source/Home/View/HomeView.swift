@@ -25,11 +25,18 @@ struct HomeView: View {
     private var bodyView: some View {
         NavigationStack(root: {
             switch viewModel.viewState {
-            case .cache:
+            case .cache(let keywordList):
                 // MARK: - 기본 화면 ( 저장 된 검색 리스트 )
-                Text("캐시")
-                    .listStyle(.plain)
-                    .navigationTitle("Search")
+                CacheView(keywordAction: { keyword in
+                    await viewModel.cacheSearch(with: keyword)
+                }, removeKeyword: { removeKeyword in
+                    await viewModel.removeKeyword(with: removeKeyword)
+                }, removeAllAction: {
+                    await viewModel.removeAll()
+                })
+                .environmentObject(CacheViewModel(searchKeywordList: keywordList))
+                .listStyle(.plain)
+                .navigationTitle("Search")
                 
             case .search(let searchItems):
                 // MARK: - 검색 결과 화면 ( Github 검색 화면 리스트 )
@@ -52,7 +59,7 @@ struct HomeView: View {
             }, set: { newKeyWord in
                 viewModel.onSearch(with: newKeyWord)
             }),
-            placement: .navigationBarDrawer,
+            placement: .automatic,
             prompt: "저장소 검색"
         )
     }

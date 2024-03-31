@@ -16,6 +16,8 @@ extension KlyUI where Base == Color {
     
     public static var background: Color { Color(uiColor: UIColor.kui.background) }
     public static var background1: Color { Color(uiColor: UIColor.kui.background1) }
+    
+    public static var red: Color { Color(uiColor: UIColor.kui.red) }
 }
 
 extension KlyUI where Base == UIColor {
@@ -28,6 +30,8 @@ extension KlyUI where Base == UIColor {
     
     public static var background: UIColor { asset(#function) }
     public static var background1: UIColor { asset(#function) }
+    
+    public static var red: UIColor { asset(#function) }
     
     private static func asset(_ name: String) -> UIColor {
         let assetName = "kui_" + name
